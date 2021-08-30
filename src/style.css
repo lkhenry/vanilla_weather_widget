@@ -1,5 +1,48 @@
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.currentWeatherWidget{
+max-width: 600px;
+margin: 10px auto;
+padding: 20px;
+border: 1px solid #CBCBCB;
+border-radius: 5px;
+}
+.extra-weather{
+    color: #70757a;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 9px;
+    padding-top: 6px;
+}
+.currentCity{
+  font-size: 22px;
+  line-height: 26px;
+}
+.current-dts{
+  color: #70757a;
+    font-size: 16px;
+    line-height: 20px;
+}
+.currentWeather{
+  color: #70757a;
+    font-size: 16px;
+    line-height: 20px;
+}
+#currentTemp{
+  color: #202124;
+    display: inline-block;
+    line-height: 60px;
+    vertical-align: top;
+    font-size: 48px;
+}
+#currentCelsius{
+color: #202124;
+    display: inline-block;
+    line-height: 24px;
+    padding-left: 6px;
+    vertical-align: top;
+    font-size: 16px;
+    margin-top: 6px;
 }

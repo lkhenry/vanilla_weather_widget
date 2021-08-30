@@ -4,36 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div class="current-weather">
-        <h1>Indianapolis</h1>
-        <ul>
-          <li>Sunday 9:00</li>
-          <li>Scattered thunderstorms</li>
+      <div class="currentWeatherWidget">
+        <div class="currentCity">Indianapolis</div>
+          <div class="current-dts">Sunday 9:00</div>
+          <div class="currentWeather">Scattered thunderstorms</div>
         </ul>
         <div class="row">
           <div class="col-6">
-            <img
+            <span id="currentEmoji"><img
               src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png"
               alt="thunderstorms"
-            />
-            27 C° | F°
+            /></span>
+            <span id="currentTemp">27</span>
+            <span id="currentCelsius">C° | F°</span>
           </div>
           <div class="col-6">
-            <ul>
-              <li>Precipitation: 46%</li>
-              <li>Humidity: 74%</li>
-              <li>Wind: 4 mph</li>
+            <div class="extra-weather">
+              <div>Precipitation: <span id="nowPrecip"> 46%</span> </div>
+              <div>Humidity: <span id="nowHum"> 74%</span></div>
+              <div>Wind: <span id="nowWind"> 4 mph</span></div>
             </ul>
           </div>
         </div>

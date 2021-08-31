@@ -10,6 +10,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
@@ -19,7 +20,6 @@
         <div class="currentCity">Indianapolis</div>
           <div class="current-dts">Sunday 9:00</div>
           <div class="currentWeather">Scattered thunderstorms</div>
-        </ul>
         <div class="row">
           <div class="col-6">
             <span id="currentEmoji"><img
@@ -31,10 +31,9 @@
           </div>
           <div class="col-6">
             <div class="extra-weather">
-              <div>Precipitation: <span id="nowPrecip"> 46%</span> </div>
-              <div>Humidity: <span id="nowHum"> 74%</span></div>
-              <div>Wind: <span id="nowWind"> 4 mph</span></div>
-            </ul>
+              <div>Precipitation: <span id="nowPrecip"> 46</span>% </div>
+              <div>Humidity: <span id="nowHum"> 74</span>%</div>
+              <div>Wind: <span id="nowWind"> 4 </span> km/h</div>
           </div>
         </div>
       </div>

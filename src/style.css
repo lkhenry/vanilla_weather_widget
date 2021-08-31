@@ -29,6 +29,7 @@ border-radius: 5px;
   color: #70757a;
     font-size: 16px;
     line-height: 20px;
+    text-transform: capitalize;
 }
 #currentTemp{
   color: #202124;
@@ -45,4 +46,11 @@ color: #202124;
     vertical-align: top;
     font-size: 16px;
     margin-top: 6px;
+}
+#currentEmoji{
+  display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    margin-top: unset;
+    width: 60px;
 }

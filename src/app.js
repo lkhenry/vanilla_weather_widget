@@ -36,10 +36,9 @@ function displayTemp(response){
 
 function search(city){
     let apiKey="76d821d1d2a2ea449995354a4c66a73d";
-let units="metric";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=Indianapolis&appid=${apiKey}&units=${units}`;
-
-axios.get(apiUrl).then(displayTemp);
+    let units="metric";
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayTemp);
 }
 
 function handleSubmit(event){
@@ -47,6 +46,9 @@ function handleSubmit(event){
     let cityInputElement=document.querySelector("#city-input");
     search(cityInputElement.value);
 }
+
+let form=document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 function displayFarenheit(event){
     event.preventDefault();
@@ -66,9 +68,6 @@ function displayCelsius(event){
 }
 
 let celsiusTemperature=null;
-
-let form=document.querySelector("#search-form");
-form.addEventListener("submit", search);
 
 let celsiusLink=document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsius);

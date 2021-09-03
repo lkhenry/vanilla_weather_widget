@@ -17,8 +17,9 @@ border-radius: 5px;
     padding-top: 6px;
 }
 .currentCity{
-  font-size: 22px;
+  font-size: 26px;
   line-height: 26px;
+  margin: 0px 0px 10px 0px;
 }
 .current-dts{
   color: #70757a;
@@ -30,6 +31,7 @@ border-radius: 5px;
     font-size: 16px;
     line-height: 20px;
     text-transform: capitalize;
+    margin: 0px 0px 10px 0px;
 }
 #currentTemp{
   color: #202124;
@@ -58,7 +60,6 @@ color: #202124;
 .active{
   color:#202124;
   cursor: default;
-  text-decoration:none;
 }
 
 #farenheit{
@@ -67,4 +68,8 @@ color: #202124;
 
 #celsius{
   text-decoration: none;
+}
+
+#search-form{
+  margin:0px 0px 15px 0px;
 }

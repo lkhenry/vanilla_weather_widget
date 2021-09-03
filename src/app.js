@@ -23,6 +23,8 @@ function displayTemp(response){
     let dateElement=document.querySelector("#current-dts");
     let emojiElement=document.querySelector("#currentEmoji");
 
+    celsiusTemperature=response.data.main.temp;
+
     temperatureElement.innerHTML=Math.round(response.data.main.temp);
     cityElement.innerHTML=response.data.name;
     descriptionElement.innerHTML=response.data.weather[0].description;
@@ -46,7 +48,32 @@ function handleSubmit(event){
     search(cityInputElement.value);
 }
 
-search("Indianapolis");
+function displayFarenheit(event){
+    event.preventDefault();
+    let farenheitTemperature=(17*9) /5 +32;
+    let temperatureElement=document.querySelector("#currentTemp");
+    celsiusLink.classList.remove("active");
+    farenheitLink.classList.add("active");
+    temperatureElement.innerHTML=Math.round(farenheitTemperature);
+}
+
+function displayCelsius(event){
+    event.preventDefault();
+    let temperatureElement=document.querySelector("#currentTemp");
+   celsiusLink.classList.add("active");
+   farenheitLink.classList.remove("active");
+    temperatureElement.innerHTML=Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature=null;
 
 let form=document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+let celsiusLink=document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsius);
+
+let farenheitLink=document.querySelector("#farenheit");
+farenheitLink.addEventListener("click", displayFarenheit);
+
+search("Indianapolis");

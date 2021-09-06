@@ -13,6 +13,25 @@ function formatDate(timestamp){
     return `${day} ${hours}:${minutes}`; 
 }
 
+function displayForecast(){
+    let forecastElement=document.querySelector("#forecast") 
+      let days=["Mon", "Tues", "Wed", "Thu", "Fri"];
+    let forecastHTML=`<div class="row">`;
+    days.forEach(function(day){
+        forecastHTML= forecastHTML+` 
+          <div class ="col-2">
+            <div class="weatherForecastDay" id="dayOne">${day}</div>
+            <img class= "weatherForecastIcon" id="dayOneIcon" src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"/>
+            <div class= "weatherForecastTemp">
+              <span class="weatherForecastHigh" id="dayOneHigh">83°</span>
+               <span class="weatherForecastLow" id="dayOneLow">65°</span></div>
+          </div>`;
+    })
+    forecastHTML=forecastHTML+`</div>`;
+    forecastElement.innerHTML=forecastHTML;
+        
+}
+
 function displayTemp(response){
     console.log(response.data);
     let temperatureElement= document.querySelector("#currentTemp");
@@ -76,3 +95,4 @@ let farenheitLink=document.querySelector("#farenheit");
 farenheitLink.addEventListener("click", displayFarenheit);
 
 search("Indianapolis");
+displayForecast();

@@ -91,29 +91,4 @@ function handleSubmit(event){
 let form=document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function displayFarenheit(event){
-    event.preventDefault();
-    let farenheitTemperature=(celsiusTemperature*9) /5 +32;
-    let temperatureElement=document.querySelector("#currentTemp");
-    celsiusLink.classList.remove("active");
-    farenheitLink.classList.add("active");
-    temperatureElement.innerHTML=Math.round(farenheitTemperature);
-}
-
-function displayCelsius(event){
-    event.preventDefault();
-    let temperatureElement=document.querySelector("#currentTemp");
-   celsiusLink.classList.add("active");
-   farenheitLink.classList.remove("active");
-    temperatureElement.innerHTML=Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature=null;
-
-let celsiusLink=document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsius);
-
-let farenheitLink=document.querySelector("#farenheit");
-farenheitLink.addEventListener("click", displayFarenheit);
-
 search("Indianapolis");
